@@ -1,0 +1,53 @@
+from pomegranate import *
+#be的概率分布
+burglary=DiscreteDistribution({'B':0.001,'~B':0.999})
+earthquake=DiscreteDistribution({'E':0.002,'~E':0.998})
+#a的条件概率
+alarm=ConditionalProbabilityTable([
+    ['B','E','A',0.95],
+    ['B','E','~A',0.94],
+    ['B','~E','A',0.94],
+    ['B','~E','~A',0.06],
+    ['~B','E','A',0.29],
+    ['~B','E','~A',0.71],
+    ['~B','~E','A',0.001],
+    ['~B','~E','~A',0.999]
+],[burglary,earthquake])
+#j和m在A条件下的条件概率分布
+johncalls=ConditionalProbabilityTable([
+    ['A','J',0.9],
+    ['A','~J',0.1],
+    ['~A','J',0.05],
+    ['~A','~J',0.95]
+],[alarm])
+marycalls=ConditionalProbabilityTable([
+    ['A','M',0.7],
+    ['A','~M',0.3],
+    ['~A','M',0.01],
+    ['~A','~M',0.99]
+],[alarm])
+#建立结点
+sb=Node(burglary,name='burglary')
+se=Node(earthquake,name='earthquake')
+sa=Node(alarm,name='alarm')
+sj=Node(johncalls,name='johncalls')
+sm=Node(marycalls,name='marycalls')
+#生成贝叶斯网络
+model = BayesianNetwork("Alarm Question")
+model.add_states(sb,se,sa,sj,sm)
+#添加边
+model.add_edge(sb,sa)
+model.add_edge(se,sa)
+model.add_edge(sa,sj)
+model.add_edge(sa,sm)
+model.bake()
+#J&M的概率为每一种J&M联合概率分布之和
+print(model.probability([['B','E','A','J','M']])+model.probability([['~B','E','A','J','M']])+model.probability([['B','~E','A','J','M']])+model.probability([['B','E','~A','J','M']])
+      +model.probability([['~B','~E','A','J','M']])+model.probability([['~B','E','~A','J','M']])+model.probability([['B','~E','~A','J','M']])+model.probability([['~B','~E','~A','J','M']]))
+#输出联合概率
+print(model.probability([['B','E','A','J','M']]))
+#预测A的概率
+print(model.predict_proba({'johncalls':'J','marycalls':'M'}))
+#条件概率为~B和J和~M的联合概率除以~B的概率
+print((model.probability([['~B','E','A','J','~M']])+model.probability([['~B','~E','A','J','~M']])
+      +model.probability([['~B','E','~A','J','~M']])+model.probability([['~B','~E','~A','J','~M']]))/0.999)

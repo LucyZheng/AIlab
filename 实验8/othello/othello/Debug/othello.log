@@ -1,0 +1,11 @@
+﻿  源.cpp
+c:\users\映雪\desktop\ai实验\othello\othello\源.cpp(296): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\映雪\desktop\ai实验\othello\othello\源.cpp(301): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\映雪\desktop\ai实验\othello\othello\源.cpp(330): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\映雪\desktop\ai实验\othello\othello\源.cpp(369): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\映雪\desktop\ai实验\othello\othello\源.cpp(417): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\映雪\desktop\ai实验\othello\othello\源.cpp(456): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\映雪\desktop\ai实验\othello\othello\源.cpp(525): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\映雪\desktop\ai实验\othello\othello\源.cpp(574): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\映雪\desktop\ai实验\othello\othello\源.cpp(593): warning C4018: “<”: 有符号/无符号不匹配
+  othello.vcxproj -> C:\Users\映雪\Desktop\AI实验\othello\Debug\othello.exe

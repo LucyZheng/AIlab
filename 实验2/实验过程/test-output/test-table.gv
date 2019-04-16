@@ -1,0 +1,484 @@
+// The Decision Tree
+digraph {
+	root
+	"root->low(cha5)"
+	root -> "root->low(cha5)" [label="low(cha5)"]
+	"root->med(cha5)"
+	root -> "root->med(cha5)" [label="med(cha5)"]
+	"root->med(cha5)->4(cha3)"
+	"root->med(cha5)" -> "root->med(cha5)->4(cha3)" [label="4(cha3)"]
+	"root->med(cha5)->4(cha3)->high(cha0)"
+	"root->med(cha5)->4(cha3)" -> "root->med(cha5)->4(cha3)->high(cha0)" [label="high(cha0)"]
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)"
+	"root->med(cha5)->4(cha3)->high(cha0)" -> "root->med(cha5)->4(cha3)->high(cha0)->med(cha4)" [label="med(cha4)"]
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->2(cha2)"
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)" -> "root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->2(cha2)" [label="2(cha2)"]
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->4(cha2)"
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)" -> "root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->4(cha2)" [label="4(cha2)"]
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->4(cha2)->med(cha1)"
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->4(cha2)" -> "root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->4(cha2)->med(cha1)" [label="med(cha1)"]
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->4(cha2)->low(cha1)"
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->4(cha2)" -> "root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->4(cha2)->low(cha1)" [label="low(cha1)"]
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->4(cha2)->high(cha1)"
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->4(cha2)" -> "root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->4(cha2)->high(cha1)" [label="high(cha1)"]
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->4(cha2)->vhigh(cha1)"
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->4(cha2)" -> "root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->4(cha2)->vhigh(cha1)" [label="vhigh(cha1)"]
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->5more(cha2)"
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)" -> "root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->5more(cha2)" [label="5more(cha2)"]
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->5more(cha2)->med(cha1)"
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->5more(cha2)" -> "root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->5more(cha2)->med(cha1)" [label="med(cha1)"]
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->5more(cha2)->vhigh(cha1)"
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->5more(cha2)" -> "root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->5more(cha2)->vhigh(cha1)" [label="vhigh(cha1)"]
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->5more(cha2)->high(cha1)"
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->5more(cha2)" -> "root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->5more(cha2)->high(cha1)" [label="high(cha1)"]
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->3(cha2)"
+	"root->med(cha5)->4(cha3)->high(cha0)->med(cha4)" -> "root->med(cha5)->4(cha3)->high(cha0)->med(cha4)->3(cha2)" [label="3(cha2)"]
+	"root->med(cha5)->4(cha3)->high(cha0)->small(cha4)"
+	"root->med(cha5)->4(cha3)->high(cha0)" -> "root->med(cha5)->4(cha3)->high(cha0)->small(cha4)" [label="small(cha4)"]
+	"root->med(cha5)->4(cha3)->high(cha0)->big(cha4)"
+	"root->med(cha5)->4(cha3)->high(cha0)" -> "root->med(cha5)->4(cha3)->high(cha0)->big(cha4)" [label="big(cha4)"]
+	"root->med(cha5)->4(cha3)->high(cha0)->big(cha4)->high(cha1)"
+	"root->med(cha5)->4(cha3)->high(cha0)->big(cha4)" -> "root->med(cha5)->4(cha3)->high(cha0)->big(cha4)->high(cha1)" [label="high(cha1)"]
+	"root->med(cha5)->4(cha3)->high(cha0)->big(cha4)->med(cha1)"
+	"root->med(cha5)->4(cha3)->high(cha0)->big(cha4)" -> "root->med(cha5)->4(cha3)->high(cha0)->big(cha4)->med(cha1)" [label="med(cha1)"]
+	"root->med(cha5)->4(cha3)->high(cha0)->big(cha4)->low(cha1)"
+	"root->med(cha5)->4(cha3)->high(cha0)->big(cha4)" -> "root->med(cha5)->4(cha3)->high(cha0)->big(cha4)->low(cha1)" [label="low(cha1)"]
+	"root->med(cha5)->4(cha3)->high(cha0)->big(cha4)->vhigh(cha1)"
+	"root->med(cha5)->4(cha3)->high(cha0)->big(cha4)" -> "root->med(cha5)->4(cha3)->high(cha0)->big(cha4)->vhigh(cha1)" [label="vhigh(cha1)"]
+	"root->med(cha5)->4(cha3)->vhigh(cha0)"
+	"root->med(cha5)->4(cha3)" -> "root->med(cha5)->4(cha3)->vhigh(cha0)" [label="vhigh(cha0)"]
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)"
+	"root->med(cha5)->4(cha3)->vhigh(cha0)" -> "root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)" [label="med(cha1)"]
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)->small(cha4)"
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)" -> "root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)->small(cha4)" [label="small(cha4)"]
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)->big(cha4)"
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)" -> "root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)->big(cha4)" [label="big(cha4)"]
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)->med(cha4)"
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)" -> "root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)->med(cha4)" [label="med(cha4)"]
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)->med(cha4)->5more(cha2)"
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)->med(cha4)" -> "root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)->med(cha4)->5more(cha2)" [label="5more(cha2)"]
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)->med(cha4)->4(cha2)"
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)->med(cha4)" -> "root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)->med(cha4)->4(cha2)" [label="4(cha2)"]
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)->med(cha4)->3(cha2)"
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)->med(cha4)" -> "root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)->med(cha4)->3(cha2)" [label="3(cha2)"]
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)->med(cha4)->2(cha2)"
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)->med(cha4)" -> "root->med(cha5)->4(cha3)->vhigh(cha0)->med(cha1)->med(cha4)->2(cha2)" [label="2(cha2)"]
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)"
+	"root->med(cha5)->4(cha3)->vhigh(cha0)" -> "root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)" [label="low(cha1)"]
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)->med(cha4)"
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)" -> "root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)->med(cha4)" [label="med(cha4)"]
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)->med(cha4)->5more(cha2)"
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)->med(cha4)" -> "root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)->med(cha4)->5more(cha2)" [label="5more(cha2)"]
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)->med(cha4)->4(cha2)"
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)->med(cha4)" -> "root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)->med(cha4)->4(cha2)" [label="4(cha2)"]
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)->med(cha4)->3(cha2)"
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)->med(cha4)" -> "root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)->med(cha4)->3(cha2)" [label="3(cha2)"]
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)->med(cha4)->2(cha2)"
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)->med(cha4)" -> "root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)->med(cha4)->2(cha2)" [label="2(cha2)"]
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)->big(cha4)"
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)" -> "root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)->big(cha4)" [label="big(cha4)"]
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)->small(cha4)"
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)" -> "root->med(cha5)->4(cha3)->vhigh(cha0)->low(cha1)->small(cha4)" [label="small(cha4)"]
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->high(cha1)"
+	"root->med(cha5)->4(cha3)->vhigh(cha0)" -> "root->med(cha5)->4(cha3)->vhigh(cha0)->high(cha1)" [label="high(cha1)"]
+	"root->med(cha5)->4(cha3)->vhigh(cha0)->vhigh(cha1)"
+	"root->med(cha5)->4(cha3)->vhigh(cha0)" -> "root->med(cha5)->4(cha3)->vhigh(cha0)->vhigh(cha1)" [label="vhigh(cha1)"]
+	"root->med(cha5)->4(cha3)->low(cha0)"
+	"root->med(cha5)->4(cha3)" -> "root->med(cha5)->4(cha3)->low(cha0)" [label="low(cha0)"]
+	"root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)"
+	"root->med(cha5)->4(cha3)->low(cha0)" -> "root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)" [label="vhigh(cha1)"]
+	"root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)->small(cha4)"
+	"root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)" -> "root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)->small(cha4)" [label="small(cha4)"]
+	"root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)->med(cha4)"
+	"root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)" -> "root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)->med(cha4)" [label="med(cha4)"]
+	"root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)->med(cha4)->5more(cha2)"
+	"root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)->med(cha4)" -> "root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)->med(cha4)->5more(cha2)" [label="5more(cha2)"]
+	"root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)->med(cha4)->2(cha2)"
+	"root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)->med(cha4)" -> "root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)->med(cha4)->2(cha2)" [label="2(cha2)"]
+	"root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)->med(cha4)->4(cha2)"
+	"root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)->med(cha4)" -> "root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)->med(cha4)->4(cha2)" [label="4(cha2)"]
+	"root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)->med(cha4)->3(cha2)"
+	"root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)->med(cha4)" -> "root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)->med(cha4)->3(cha2)" [label="3(cha2)"]
+	"root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)->big(cha4)"
+	"root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)" -> "root->med(cha5)->4(cha3)->low(cha0)->vhigh(cha1)->big(cha4)" [label="big(cha4)"]
+	"root->med(cha5)->4(cha3)->low(cha0)->high(cha1)"
+	"root->med(cha5)->4(cha3)->low(cha0)" -> "root->med(cha5)->4(cha3)->low(cha0)->high(cha1)" [label="high(cha1)"]
+	"root->med(cha5)->4(cha3)->low(cha0)->low(cha1)"
+	"root->med(cha5)->4(cha3)->low(cha0)" -> "root->med(cha5)->4(cha3)->low(cha0)->low(cha1)" [label="low(cha1)"]
+	"root->med(cha5)->4(cha3)->low(cha0)->med(cha1)"
+	"root->med(cha5)->4(cha3)->low(cha0)" -> "root->med(cha5)->4(cha3)->low(cha0)->med(cha1)" [label="med(cha1)"]
+	"root->med(cha5)->4(cha3)->med(cha0)"
+	"root->med(cha5)->4(cha3)" -> "root->med(cha5)->4(cha3)->med(cha0)" [label="med(cha0)"]
+	"root->med(cha5)->4(cha3)->med(cha0)->med(cha1)"
+	"root->med(cha5)->4(cha3)->med(cha0)" -> "root->med(cha5)->4(cha3)->med(cha0)->med(cha1)" [label="med(cha1)"]
+	"root->med(cha5)->4(cha3)->med(cha0)->high(cha1)"
+	"root->med(cha5)->4(cha3)->med(cha0)" -> "root->med(cha5)->4(cha3)->med(cha0)->high(cha1)" [label="high(cha1)"]
+	"root->med(cha5)->4(cha3)->med(cha0)->high(cha1)->med(cha4)"
+	"root->med(cha5)->4(cha3)->med(cha0)->high(cha1)" -> "root->med(cha5)->4(cha3)->med(cha0)->high(cha1)->med(cha4)" [label="med(cha4)"]
+	"root->med(cha5)->4(cha3)->med(cha0)->high(cha1)->med(cha4)->4(cha2)"
+	"root->med(cha5)->4(cha3)->med(cha0)->high(cha1)->med(cha4)" -> "root->med(cha5)->4(cha3)->med(cha0)->high(cha1)->med(cha4)->4(cha2)" [label="4(cha2)"]
+	"root->med(cha5)->4(cha3)->med(cha0)->high(cha1)->med(cha4)->2(cha2)"
+	"root->med(cha5)->4(cha3)->med(cha0)->high(cha1)->med(cha4)" -> "root->med(cha5)->4(cha3)->med(cha0)->high(cha1)->med(cha4)->2(cha2)" [label="2(cha2)"]
+	"root->med(cha5)->4(cha3)->med(cha0)->high(cha1)->med(cha4)->3(cha2)"
+	"root->med(cha5)->4(cha3)->med(cha0)->high(cha1)->med(cha4)" -> "root->med(cha5)->4(cha3)->med(cha0)->high(cha1)->med(cha4)->3(cha2)" [label="3(cha2)"]
+	"root->med(cha5)->4(cha3)->med(cha0)->high(cha1)->med(cha4)->5more(cha2)"
+	"root->med(cha5)->4(cha3)->med(cha0)->high(cha1)->med(cha4)" -> "root->med(cha5)->4(cha3)->med(cha0)->high(cha1)->med(cha4)->5more(cha2)" [label="5more(cha2)"]
+	"root->med(cha5)->4(cha3)->med(cha0)->high(cha1)->small(cha4)"
+	"root->med(cha5)->4(cha3)->med(cha0)->high(cha1)" -> "root->med(cha5)->4(cha3)->med(cha0)->high(cha1)->small(cha4)" [label="small(cha4)"]
+	"root->med(cha5)->4(cha3)->med(cha0)->high(cha1)->big(cha4)"
+	"root->med(cha5)->4(cha3)->med(cha0)->high(cha1)" -> "root->med(cha5)->4(cha3)->med(cha0)->high(cha1)->big(cha4)" [label="big(cha4)"]
+	"root->med(cha5)->4(cha3)->med(cha0)->low(cha1)"
+	"root->med(cha5)->4(cha3)->med(cha0)" -> "root->med(cha5)->4(cha3)->med(cha0)->low(cha1)" [label="low(cha1)"]
+	"root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)"
+	"root->med(cha5)->4(cha3)->med(cha0)" -> "root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)" [label="vhigh(cha1)"]
+	"root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)->small(cha4)"
+	"root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)" -> "root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)->small(cha4)" [label="small(cha4)"]
+	"root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)->med(cha4)"
+	"root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)" -> "root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)->med(cha4)" [label="med(cha4)"]
+	"root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)->med(cha4)->3(cha2)"
+	"root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)->med(cha4)" -> "root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)->med(cha4)->3(cha2)" [label="3(cha2)"]
+	"root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)->med(cha4)->5more(cha2)"
+	"root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)->med(cha4)" -> "root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)->med(cha4)->5more(cha2)" [label="5more(cha2)"]
+	"root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)->med(cha4)->2(cha2)"
+	"root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)->med(cha4)" -> "root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)->med(cha4)->2(cha2)" [label="2(cha2)"]
+	"root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)->med(cha4)->4(cha2)"
+	"root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)->med(cha4)" -> "root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)->med(cha4)->4(cha2)" [label="4(cha2)"]
+	"root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)->big(cha4)"
+	"root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)" -> "root->med(cha5)->4(cha3)->med(cha0)->vhigh(cha1)->big(cha4)" [label="big(cha4)"]
+	"root->med(cha5)->2(cha3)"
+	"root->med(cha5)" -> "root->med(cha5)->2(cha3)" [label="2(cha3)"]
+	"root->med(cha5)->more(cha3)"
+	"root->med(cha5)" -> "root->med(cha5)->more(cha3)" [label="more(cha3)"]
+	"root->med(cha5)->more(cha3)->big(cha4)"
+	"root->med(cha5)->more(cha3)" -> "root->med(cha5)->more(cha3)->big(cha4)" [label="big(cha4)"]
+	"root->med(cha5)->more(cha3)->big(cha4)->high(cha1)"
+	"root->med(cha5)->more(cha3)->big(cha4)" -> "root->med(cha5)->more(cha3)->big(cha4)->high(cha1)" [label="high(cha1)"]
+	"root->med(cha5)->more(cha3)->big(cha4)->high(cha1)->low(cha0)"
+	"root->med(cha5)->more(cha3)->big(cha4)->high(cha1)" -> "root->med(cha5)->more(cha3)->big(cha4)->high(cha1)->low(cha0)" [label="low(cha0)"]
+	"root->med(cha5)->more(cha3)->big(cha4)->high(cha1)->high(cha0)"
+	"root->med(cha5)->more(cha3)->big(cha4)->high(cha1)" -> "root->med(cha5)->more(cha3)->big(cha4)->high(cha1)->high(cha0)" [label="high(cha0)"]
+	"root->med(cha5)->more(cha3)->big(cha4)->high(cha1)->med(cha0)"
+	"root->med(cha5)->more(cha3)->big(cha4)->high(cha1)" -> "root->med(cha5)->more(cha3)->big(cha4)->high(cha1)->med(cha0)" [label="med(cha0)"]
+	"root->med(cha5)->more(cha3)->big(cha4)->high(cha1)->vhigh(cha0)"
+	"root->med(cha5)->more(cha3)->big(cha4)->high(cha1)" -> "root->med(cha5)->more(cha3)->big(cha4)->high(cha1)->vhigh(cha0)" [label="vhigh(cha0)"]
+	"root->med(cha5)->more(cha3)->big(cha4)->med(cha1)"
+	"root->med(cha5)->more(cha3)->big(cha4)" -> "root->med(cha5)->more(cha3)->big(cha4)->med(cha1)" [label="med(cha1)"]
+	"root->med(cha5)->more(cha3)->big(cha4)->low(cha1)"
+	"root->med(cha5)->more(cha3)->big(cha4)" -> "root->med(cha5)->more(cha3)->big(cha4)->low(cha1)" [label="low(cha1)"]
+	"root->med(cha5)->more(cha3)->big(cha4)->vhigh(cha1)"
+	"root->med(cha5)->more(cha3)->big(cha4)" -> "root->med(cha5)->more(cha3)->big(cha4)->vhigh(cha1)" [label="vhigh(cha1)"]
+	"root->med(cha5)->more(cha3)->big(cha4)->vhigh(cha1)->high(cha0)"
+	"root->med(cha5)->more(cha3)->big(cha4)->vhigh(cha1)" -> "root->med(cha5)->more(cha3)->big(cha4)->vhigh(cha1)->high(cha0)" [label="high(cha0)"]
+	"root->med(cha5)->more(cha3)->big(cha4)->vhigh(cha1)->vhigh(cha0)"
+	"root->med(cha5)->more(cha3)->big(cha4)->vhigh(cha1)" -> "root->med(cha5)->more(cha3)->big(cha4)->vhigh(cha1)->vhigh(cha0)" [label="vhigh(cha0)"]
+	"root->med(cha5)->more(cha3)->big(cha4)->vhigh(cha1)->low(cha0)"
+	"root->med(cha5)->more(cha3)->big(cha4)->vhigh(cha1)" -> "root->med(cha5)->more(cha3)->big(cha4)->vhigh(cha1)->low(cha0)" [label="low(cha0)"]
+	"root->med(cha5)->more(cha3)->big(cha4)->vhigh(cha1)->med(cha0)"
+	"root->med(cha5)->more(cha3)->big(cha4)->vhigh(cha1)" -> "root->med(cha5)->more(cha3)->big(cha4)->vhigh(cha1)->med(cha0)" [label="med(cha0)"]
+	"root->med(cha5)->more(cha3)->med(cha4)"
+	"root->med(cha5)->more(cha3)" -> "root->med(cha5)->more(cha3)->med(cha4)" [label="med(cha4)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->low(cha0)"
+	"root->med(cha5)->more(cha3)->med(cha4)" -> "root->med(cha5)->more(cha3)->med(cha4)->low(cha0)" [label="low(cha0)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->low(cha0)->med(cha1)"
+	"root->med(cha5)->more(cha3)->med(cha4)->low(cha0)" -> "root->med(cha5)->more(cha3)->med(cha4)->low(cha0)->med(cha1)" [label="med(cha1)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->low(cha0)->low(cha1)"
+	"root->med(cha5)->more(cha3)->med(cha4)->low(cha0)" -> "root->med(cha5)->more(cha3)->med(cha4)->low(cha0)->low(cha1)" [label="low(cha1)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->low(cha0)->high(cha1)"
+	"root->med(cha5)->more(cha3)->med(cha4)->low(cha0)" -> "root->med(cha5)->more(cha3)->med(cha4)->low(cha0)->high(cha1)" [label="high(cha1)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->low(cha0)->vhigh(cha1)"
+	"root->med(cha5)->more(cha3)->med(cha4)->low(cha0)" -> "root->med(cha5)->more(cha3)->med(cha4)->low(cha0)->vhigh(cha1)" [label="vhigh(cha1)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->low(cha0)->vhigh(cha1)->4(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->low(cha0)->vhigh(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->low(cha0)->vhigh(cha1)->4(cha2)" [label="4(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->low(cha0)->vhigh(cha1)->2(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->low(cha0)->vhigh(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->low(cha0)->vhigh(cha1)->2(cha2)" [label="2(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->low(cha0)->vhigh(cha1)->5more(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->low(cha0)->vhigh(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->low(cha0)->vhigh(cha1)->5more(cha2)" [label="5more(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->low(cha0)->vhigh(cha1)->3(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->low(cha0)->vhigh(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->low(cha0)->vhigh(cha1)->3(cha2)" [label="3(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->med(cha0)"
+	"root->med(cha5)->more(cha3)->med(cha4)" -> "root->med(cha5)->more(cha3)->med(cha4)->med(cha0)" [label="med(cha0)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->med(cha0)->4(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->med(cha0)" -> "root->med(cha5)->more(cha3)->med(cha4)->med(cha0)->4(cha2)" [label="4(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->med(cha0)->5more(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->med(cha0)" -> "root->med(cha5)->more(cha3)->med(cha4)->med(cha0)->5more(cha2)" [label="5more(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->med(cha0)->2(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->med(cha0)" -> "root->med(cha5)->more(cha3)->med(cha4)->med(cha0)->2(cha2)" [label="2(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->med(cha0)->2(cha2)->low(cha1)"
+	"root->med(cha5)->more(cha3)->med(cha4)->med(cha0)->2(cha2)" -> "root->med(cha5)->more(cha3)->med(cha4)->med(cha0)->2(cha2)->low(cha1)" [label="low(cha1)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->med(cha0)->2(cha2)->vhigh(cha1)"
+	"root->med(cha5)->more(cha3)->med(cha4)->med(cha0)->2(cha2)" -> "root->med(cha5)->more(cha3)->med(cha4)->med(cha0)->2(cha2)->vhigh(cha1)" [label="vhigh(cha1)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->med(cha0)->2(cha2)->high(cha1)"
+	"root->med(cha5)->more(cha3)->med(cha4)->med(cha0)->2(cha2)" -> "root->med(cha5)->more(cha3)->med(cha4)->med(cha0)->2(cha2)->high(cha1)" [label="high(cha1)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->med(cha0)->3(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->med(cha0)" -> "root->med(cha5)->more(cha3)->med(cha4)->med(cha0)->3(cha2)" [label="3(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)"
+	"root->med(cha5)->more(cha3)->med(cha4)" -> "root->med(cha5)->more(cha3)->med(cha4)->high(cha0)" [label="high(cha0)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->med(cha1)"
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)" -> "root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->med(cha1)" [label="med(cha1)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->med(cha1)->2(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->med(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->med(cha1)->2(cha2)" [label="2(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->med(cha1)->5more(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->med(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->med(cha1)->5more(cha2)" [label="5more(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->med(cha1)->4(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->med(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->med(cha1)->4(cha2)" [label="4(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->med(cha1)->3(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->med(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->med(cha1)->3(cha2)" [label="3(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->low(cha1)"
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)" -> "root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->low(cha1)" [label="low(cha1)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->low(cha1)->2(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->low(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->low(cha1)->2(cha2)" [label="2(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->low(cha1)->4(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->low(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->low(cha1)->4(cha2)" [label="4(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->low(cha1)->3(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->low(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->low(cha1)->3(cha2)" [label="3(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->low(cha1)->5more(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->low(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->low(cha1)->5more(cha2)" [label="5more(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->high(cha1)"
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)" -> "root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->high(cha1)" [label="high(cha1)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->high(cha1)->2(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->high(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->high(cha1)->2(cha2)" [label="2(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->high(cha1)->3(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->high(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->high(cha1)->3(cha2)" [label="3(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->high(cha1)->4(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->high(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->high(cha1)->4(cha2)" [label="4(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->high(cha1)->5more(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->high(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->high(cha1)->5more(cha2)" [label="5more(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->vhigh(cha1)"
+	"root->med(cha5)->more(cha3)->med(cha4)->high(cha0)" -> "root->med(cha5)->more(cha3)->med(cha4)->high(cha0)->vhigh(cha1)" [label="vhigh(cha1)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)"
+	"root->med(cha5)->more(cha3)->med(cha4)" -> "root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)" [label="vhigh(cha0)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->vhigh(cha1)"
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)" -> "root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->vhigh(cha1)" [label="vhigh(cha1)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->low(cha1)"
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)" -> "root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->low(cha1)" [label="low(cha1)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->low(cha1)->3(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->low(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->low(cha1)->3(cha2)" [label="3(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->low(cha1)->5more(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->low(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->low(cha1)->5more(cha2)" [label="5more(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->low(cha1)->2(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->low(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->low(cha1)->2(cha2)" [label="2(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->low(cha1)->4(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->low(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->low(cha1)->4(cha2)" [label="4(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->med(cha1)"
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)" -> "root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->med(cha1)" [label="med(cha1)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->med(cha1)->5more(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->med(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->med(cha1)->5more(cha2)" [label="5more(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->med(cha1)->3(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->med(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->med(cha1)->3(cha2)" [label="3(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->med(cha1)->2(cha2)"
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->med(cha1)" -> "root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->med(cha1)->2(cha2)" [label="2(cha2)"]
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->high(cha1)"
+	"root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)" -> "root->med(cha5)->more(cha3)->med(cha4)->vhigh(cha0)->high(cha1)" [label="high(cha1)"]
+	"root->med(cha5)->more(cha3)->small(cha4)"
+	"root->med(cha5)->more(cha3)" -> "root->med(cha5)->more(cha3)->small(cha4)" [label="small(cha4)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->vhigh(cha0)"
+	"root->med(cha5)->more(cha3)->small(cha4)" -> "root->med(cha5)->more(cha3)->small(cha4)->vhigh(cha0)" [label="vhigh(cha0)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)"
+	"root->med(cha5)->more(cha3)->small(cha4)" -> "root->med(cha5)->more(cha3)->small(cha4)->low(cha0)" [label="low(cha0)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->4(cha2)"
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)" -> "root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->4(cha2)" [label="4(cha2)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->2(cha2)"
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)" -> "root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->2(cha2)" [label="2(cha2)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->3(cha2)"
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)" -> "root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->3(cha2)" [label="3(cha2)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->3(cha2)->vhigh(cha1)"
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->3(cha2)" -> "root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->3(cha2)->vhigh(cha1)" [label="vhigh(cha1)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->3(cha2)->high(cha1)"
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->3(cha2)" -> "root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->3(cha2)->high(cha1)" [label="high(cha1)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->3(cha2)->med(cha1)"
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->3(cha2)" -> "root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->3(cha2)->med(cha1)" [label="med(cha1)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->3(cha2)->low(cha1)"
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->3(cha2)" -> "root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->3(cha2)->low(cha1)" [label="low(cha1)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->5more(cha2)"
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)" -> "root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->5more(cha2)" [label="5more(cha2)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->5more(cha2)->vhigh(cha1)"
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->5more(cha2)" -> "root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->5more(cha2)->vhigh(cha1)" [label="vhigh(cha1)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->5more(cha2)->low(cha1)"
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->5more(cha2)" -> "root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->5more(cha2)->low(cha1)" [label="low(cha1)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->5more(cha2)->med(cha1)"
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->5more(cha2)" -> "root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->5more(cha2)->med(cha1)" [label="med(cha1)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->5more(cha2)->high(cha1)"
+	"root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->5more(cha2)" -> "root->med(cha5)->more(cha3)->small(cha4)->low(cha0)->5more(cha2)->high(cha1)" [label="high(cha1)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)"
+	"root->med(cha5)->more(cha3)->small(cha4)" -> "root->med(cha5)->more(cha3)->small(cha4)->med(cha0)" [label="med(cha0)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->high(cha1)"
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)" -> "root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->high(cha1)" [label="high(cha1)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->vhigh(cha1)"
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)" -> "root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->vhigh(cha1)" [label="vhigh(cha1)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->med(cha1)"
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)" -> "root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->med(cha1)" [label="med(cha1)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->med(cha1)->3(cha2)"
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->med(cha1)" -> "root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->med(cha1)->3(cha2)" [label="3(cha2)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->med(cha1)->2(cha2)"
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->med(cha1)" -> "root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->med(cha1)->2(cha2)" [label="2(cha2)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->med(cha1)->5more(cha2)"
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->med(cha1)" -> "root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->med(cha1)->5more(cha2)" [label="5more(cha2)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->med(cha1)->4(cha2)"
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->med(cha1)" -> "root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->med(cha1)->4(cha2)" [label="4(cha2)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->low(cha1)"
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)" -> "root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->low(cha1)" [label="low(cha1)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->low(cha1)->5more(cha2)"
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->low(cha1)" -> "root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->low(cha1)->5more(cha2)" [label="5more(cha2)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->low(cha1)->3(cha2)"
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->low(cha1)" -> "root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->low(cha1)->3(cha2)" [label="3(cha2)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->low(cha1)->2(cha2)"
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->low(cha1)" -> "root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->low(cha1)->2(cha2)" [label="2(cha2)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->low(cha1)->4(cha2)"
+	"root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->low(cha1)" -> "root->med(cha5)->more(cha3)->small(cha4)->med(cha0)->low(cha1)->4(cha2)" [label="4(cha2)"]
+	"root->med(cha5)->more(cha3)->small(cha4)->high(cha0)"
+	"root->med(cha5)->more(cha3)->small(cha4)" -> "root->med(cha5)->more(cha3)->small(cha4)->high(cha0)" [label="high(cha0)"]
+	"root->high(cha5)"
+	root -> "root->high(cha5)" [label="high(cha5)"]
+	"root->high(cha5)->more(cha3)"
+	"root->high(cha5)" -> "root->high(cha5)->more(cha3)" [label="more(cha3)"]
+	"root->high(cha5)->more(cha3)->med(cha0)"
+	"root->high(cha5)->more(cha3)" -> "root->high(cha5)->more(cha3)->med(cha0)" [label="med(cha0)"]
+	"root->high(cha5)->more(cha3)->med(cha0)->2(cha2)"
+	"root->high(cha5)->more(cha3)->med(cha0)" -> "root->high(cha5)->more(cha3)->med(cha0)->2(cha2)" [label="2(cha2)"]
+	"root->high(cha5)->more(cha3)->med(cha0)->2(cha2)->big(cha4)"
+	"root->high(cha5)->more(cha3)->med(cha0)->2(cha2)" -> "root->high(cha5)->more(cha3)->med(cha0)->2(cha2)->big(cha4)" [label="big(cha4)"]
+	"root->high(cha5)->more(cha3)->med(cha0)->2(cha2)->small(cha4)"
+	"root->high(cha5)->more(cha3)->med(cha0)->2(cha2)" -> "root->high(cha5)->more(cha3)->med(cha0)->2(cha2)->small(cha4)" [label="small(cha4)"]
+	"root->high(cha5)->more(cha3)->med(cha0)->2(cha2)->med(cha4)"
+	"root->high(cha5)->more(cha3)->med(cha0)->2(cha2)" -> "root->high(cha5)->more(cha3)->med(cha0)->2(cha2)->med(cha4)" [label="med(cha4)"]
+	"root->high(cha5)->more(cha3)->med(cha0)->4(cha2)"
+	"root->high(cha5)->more(cha3)->med(cha0)" -> "root->high(cha5)->more(cha3)->med(cha0)->4(cha2)" [label="4(cha2)"]
+	"root->high(cha5)->more(cha3)->med(cha0)->3(cha2)"
+	"root->high(cha5)->more(cha3)->med(cha0)" -> "root->high(cha5)->more(cha3)->med(cha0)->3(cha2)" [label="3(cha2)"]
+	"root->high(cha5)->more(cha3)->med(cha0)->5more(cha2)"
+	"root->high(cha5)->more(cha3)->med(cha0)" -> "root->high(cha5)->more(cha3)->med(cha0)->5more(cha2)" [label="5more(cha2)"]
+	"root->high(cha5)->more(cha3)->low(cha0)"
+	"root->high(cha5)->more(cha3)" -> "root->high(cha5)->more(cha3)->low(cha0)" [label="low(cha0)"]
+	"root->high(cha5)->more(cha3)->low(cha0)->2(cha2)"
+	"root->high(cha5)->more(cha3)->low(cha0)" -> "root->high(cha5)->more(cha3)->low(cha0)->2(cha2)" [label="2(cha2)"]
+	"root->high(cha5)->more(cha3)->low(cha0)->2(cha2)->small(cha4)"
+	"root->high(cha5)->more(cha3)->low(cha0)->2(cha2)" -> "root->high(cha5)->more(cha3)->low(cha0)->2(cha2)->small(cha4)" [label="small(cha4)"]
+	"root->high(cha5)->more(cha3)->low(cha0)->2(cha2)->med(cha4)"
+	"root->high(cha5)->more(cha3)->low(cha0)->2(cha2)" -> "root->high(cha5)->more(cha3)->low(cha0)->2(cha2)->med(cha4)" [label="med(cha4)"]
+	"root->high(cha5)->more(cha3)->low(cha0)->2(cha2)->big(cha4)"
+	"root->high(cha5)->more(cha3)->low(cha0)->2(cha2)" -> "root->high(cha5)->more(cha3)->low(cha0)->2(cha2)->big(cha4)" [label="big(cha4)"]
+	"root->high(cha5)->more(cha3)->low(cha0)->4(cha2)"
+	"root->high(cha5)->more(cha3)->low(cha0)" -> "root->high(cha5)->more(cha3)->low(cha0)->4(cha2)" [label="4(cha2)"]
+	"root->high(cha5)->more(cha3)->low(cha0)->3(cha2)"
+	"root->high(cha5)->more(cha3)->low(cha0)" -> "root->high(cha5)->more(cha3)->low(cha0)->3(cha2)" [label="3(cha2)"]
+	"root->high(cha5)->more(cha3)->low(cha0)->5more(cha2)"
+	"root->high(cha5)->more(cha3)->low(cha0)" -> "root->high(cha5)->more(cha3)->low(cha0)->5more(cha2)" [label="5more(cha2)"]
+	"root->high(cha5)->more(cha3)->vhigh(cha0)"
+	"root->high(cha5)->more(cha3)" -> "root->high(cha5)->more(cha3)->vhigh(cha0)" [label="vhigh(cha0)"]
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)"
+	"root->high(cha5)->more(cha3)->vhigh(cha0)" -> "root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)" [label="low(cha1)"]
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)->2(cha2)"
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)" -> "root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)->2(cha2)" [label="2(cha2)"]
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)->2(cha2)->big(cha4)"
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)->2(cha2)" -> "root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)->2(cha2)->big(cha4)" [label="big(cha4)"]
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)->2(cha2)->med(cha4)"
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)->2(cha2)" -> "root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)->2(cha2)->med(cha4)" [label="med(cha4)"]
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)->2(cha2)->small(cha4)"
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)->2(cha2)" -> "root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)->2(cha2)->small(cha4)" [label="small(cha4)"]
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)->4(cha2)"
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)" -> "root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)->4(cha2)" [label="4(cha2)"]
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)->5more(cha2)"
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)" -> "root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)->5more(cha2)" [label="5more(cha2)"]
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)->3(cha2)"
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)" -> "root->high(cha5)->more(cha3)->vhigh(cha0)->low(cha1)->3(cha2)" [label="3(cha2)"]
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->vhigh(cha1)"
+	"root->high(cha5)->more(cha3)->vhigh(cha0)" -> "root->high(cha5)->more(cha3)->vhigh(cha0)->vhigh(cha1)" [label="vhigh(cha1)"]
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->high(cha1)"
+	"root->high(cha5)->more(cha3)->vhigh(cha0)" -> "root->high(cha5)->more(cha3)->vhigh(cha0)->high(cha1)" [label="high(cha1)"]
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)"
+	"root->high(cha5)->more(cha3)->vhigh(cha0)" -> "root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)" [label="med(cha1)"]
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)->3(cha2)"
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)" -> "root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)->3(cha2)" [label="3(cha2)"]
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)->5more(cha2)"
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)" -> "root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)->5more(cha2)" [label="5more(cha2)"]
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)->4(cha2)"
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)" -> "root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)->4(cha2)" [label="4(cha2)"]
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)->2(cha2)"
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)" -> "root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)->2(cha2)" [label="2(cha2)"]
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)->2(cha2)->med(cha4)"
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)->2(cha2)" -> "root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)->2(cha2)->med(cha4)" [label="med(cha4)"]
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)->2(cha2)->small(cha4)"
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)->2(cha2)" -> "root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)->2(cha2)->small(cha4)" [label="small(cha4)"]
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)->2(cha2)->big(cha4)"
+	"root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)->2(cha2)" -> "root->high(cha5)->more(cha3)->vhigh(cha0)->med(cha1)->2(cha2)->big(cha4)" [label="big(cha4)"]
+	"root->high(cha5)->more(cha3)->high(cha0)"
+	"root->high(cha5)->more(cha3)" -> "root->high(cha5)->more(cha3)->high(cha0)" [label="high(cha0)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->med(cha1)"
+	"root->high(cha5)->more(cha3)->high(cha0)" -> "root->high(cha5)->more(cha3)->high(cha0)->med(cha1)" [label="med(cha1)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->med(cha1)->5more(cha2)"
+	"root->high(cha5)->more(cha3)->high(cha0)->med(cha1)" -> "root->high(cha5)->more(cha3)->high(cha0)->med(cha1)->5more(cha2)" [label="5more(cha2)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->med(cha1)->3(cha2)"
+	"root->high(cha5)->more(cha3)->high(cha0)->med(cha1)" -> "root->high(cha5)->more(cha3)->high(cha0)->med(cha1)->3(cha2)" [label="3(cha2)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->med(cha1)->2(cha2)"
+	"root->high(cha5)->more(cha3)->high(cha0)->med(cha1)" -> "root->high(cha5)->more(cha3)->high(cha0)->med(cha1)->2(cha2)" [label="2(cha2)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->med(cha1)->2(cha2)->big(cha4)"
+	"root->high(cha5)->more(cha3)->high(cha0)->med(cha1)->2(cha2)" -> "root->high(cha5)->more(cha3)->high(cha0)->med(cha1)->2(cha2)->big(cha4)" [label="big(cha4)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->med(cha1)->2(cha2)->med(cha4)"
+	"root->high(cha5)->more(cha3)->high(cha0)->med(cha1)->2(cha2)" -> "root->high(cha5)->more(cha3)->high(cha0)->med(cha1)->2(cha2)->med(cha4)" [label="med(cha4)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->med(cha1)->2(cha2)->small(cha4)"
+	"root->high(cha5)->more(cha3)->high(cha0)->med(cha1)->2(cha2)" -> "root->high(cha5)->more(cha3)->high(cha0)->med(cha1)->2(cha2)->small(cha4)" [label="small(cha4)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->med(cha1)->4(cha2)"
+	"root->high(cha5)->more(cha3)->high(cha0)->med(cha1)" -> "root->high(cha5)->more(cha3)->high(cha0)->med(cha1)->4(cha2)" [label="4(cha2)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->vhigh(cha1)"
+	"root->high(cha5)->more(cha3)->high(cha0)" -> "root->high(cha5)->more(cha3)->high(cha0)->vhigh(cha1)" [label="vhigh(cha1)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->low(cha1)"
+	"root->high(cha5)->more(cha3)->high(cha0)" -> "root->high(cha5)->more(cha3)->high(cha0)->low(cha1)" [label="low(cha1)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->low(cha1)->4(cha2)"
+	"root->high(cha5)->more(cha3)->high(cha0)->low(cha1)" -> "root->high(cha5)->more(cha3)->high(cha0)->low(cha1)->4(cha2)" [label="4(cha2)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->low(cha1)->2(cha2)"
+	"root->high(cha5)->more(cha3)->high(cha0)->low(cha1)" -> "root->high(cha5)->more(cha3)->high(cha0)->low(cha1)->2(cha2)" [label="2(cha2)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->low(cha1)->2(cha2)->small(cha4)"
+	"root->high(cha5)->more(cha3)->high(cha0)->low(cha1)->2(cha2)" -> "root->high(cha5)->more(cha3)->high(cha0)->low(cha1)->2(cha2)->small(cha4)" [label="small(cha4)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->low(cha1)->2(cha2)->big(cha4)"
+	"root->high(cha5)->more(cha3)->high(cha0)->low(cha1)->2(cha2)" -> "root->high(cha5)->more(cha3)->high(cha0)->low(cha1)->2(cha2)->big(cha4)" [label="big(cha4)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->low(cha1)->2(cha2)->med(cha4)"
+	"root->high(cha5)->more(cha3)->high(cha0)->low(cha1)->2(cha2)" -> "root->high(cha5)->more(cha3)->high(cha0)->low(cha1)->2(cha2)->med(cha4)" [label="med(cha4)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->low(cha1)->5more(cha2)"
+	"root->high(cha5)->more(cha3)->high(cha0)->low(cha1)" -> "root->high(cha5)->more(cha3)->high(cha0)->low(cha1)->5more(cha2)" [label="5more(cha2)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->low(cha1)->3(cha2)"
+	"root->high(cha5)->more(cha3)->high(cha0)->low(cha1)" -> "root->high(cha5)->more(cha3)->high(cha0)->low(cha1)->3(cha2)" [label="3(cha2)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->high(cha1)"
+	"root->high(cha5)->more(cha3)->high(cha0)" -> "root->high(cha5)->more(cha3)->high(cha0)->high(cha1)" [label="high(cha1)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->high(cha1)->2(cha2)"
+	"root->high(cha5)->more(cha3)->high(cha0)->high(cha1)" -> "root->high(cha5)->more(cha3)->high(cha0)->high(cha1)->2(cha2)" [label="2(cha2)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->high(cha1)->2(cha2)->small(cha4)"
+	"root->high(cha5)->more(cha3)->high(cha0)->high(cha1)->2(cha2)" -> "root->high(cha5)->more(cha3)->high(cha0)->high(cha1)->2(cha2)->small(cha4)" [label="small(cha4)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->high(cha1)->2(cha2)->big(cha4)"
+	"root->high(cha5)->more(cha3)->high(cha0)->high(cha1)->2(cha2)" -> "root->high(cha5)->more(cha3)->high(cha0)->high(cha1)->2(cha2)->big(cha4)" [label="big(cha4)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->high(cha1)->2(cha2)->med(cha4)"
+	"root->high(cha5)->more(cha3)->high(cha0)->high(cha1)->2(cha2)" -> "root->high(cha5)->more(cha3)->high(cha0)->high(cha1)->2(cha2)->med(cha4)" [label="med(cha4)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->high(cha1)->3(cha2)"
+	"root->high(cha5)->more(cha3)->high(cha0)->high(cha1)" -> "root->high(cha5)->more(cha3)->high(cha0)->high(cha1)->3(cha2)" [label="3(cha2)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->high(cha1)->5more(cha2)"
+	"root->high(cha5)->more(cha3)->high(cha0)->high(cha1)" -> "root->high(cha5)->more(cha3)->high(cha0)->high(cha1)->5more(cha2)" [label="5more(cha2)"]
+	"root->high(cha5)->more(cha3)->high(cha0)->high(cha1)->4(cha2)"
+	"root->high(cha5)->more(cha3)->high(cha0)->high(cha1)" -> "root->high(cha5)->more(cha3)->high(cha0)->high(cha1)->4(cha2)" [label="4(cha2)"]
+	"root->high(cha5)->4(cha3)"
+	"root->high(cha5)" -> "root->high(cha5)->4(cha3)" [label="4(cha3)"]
+	"root->high(cha5)->4(cha3)->high(cha1)"
+	"root->high(cha5)->4(cha3)" -> "root->high(cha5)->4(cha3)->high(cha1)" [label="high(cha1)"]
+	"root->high(cha5)->4(cha3)->high(cha1)->vhigh(cha0)"
+	"root->high(cha5)->4(cha3)->high(cha1)" -> "root->high(cha5)->4(cha3)->high(cha1)->vhigh(cha0)" [label="vhigh(cha0)"]
+	"root->high(cha5)->4(cha3)->high(cha1)->med(cha0)"
+	"root->high(cha5)->4(cha3)->high(cha1)" -> "root->high(cha5)->4(cha3)->high(cha1)->med(cha0)" [label="med(cha0)"]
+	"root->high(cha5)->4(cha3)->high(cha1)->low(cha0)"
+	"root->high(cha5)->4(cha3)->high(cha1)" -> "root->high(cha5)->4(cha3)->high(cha1)->low(cha0)" [label="low(cha0)"]
+	"root->high(cha5)->4(cha3)->high(cha1)->high(cha0)"
+	"root->high(cha5)->4(cha3)->high(cha1)" -> "root->high(cha5)->4(cha3)->high(cha1)->high(cha0)" [label="high(cha0)"]
+	"root->high(cha5)->4(cha3)->vhigh(cha1)"
+	"root->high(cha5)->4(cha3)" -> "root->high(cha5)->4(cha3)->vhigh(cha1)" [label="vhigh(cha1)"]
+	"root->high(cha5)->4(cha3)->vhigh(cha1)->high(cha0)"
+	"root->high(cha5)->4(cha3)->vhigh(cha1)" -> "root->high(cha5)->4(cha3)->vhigh(cha1)->high(cha0)" [label="high(cha0)"]
+	"root->high(cha5)->4(cha3)->vhigh(cha1)->vhigh(cha0)"
+	"root->high(cha5)->4(cha3)->vhigh(cha1)" -> "root->high(cha5)->4(cha3)->vhigh(cha1)->vhigh(cha0)" [label="vhigh(cha0)"]
+	"root->high(cha5)->4(cha3)->vhigh(cha1)->med(cha0)"
+	"root->high(cha5)->4(cha3)->vhigh(cha1)" -> "root->high(cha5)->4(cha3)->vhigh(cha1)->med(cha0)" [label="med(cha0)"]
+	"root->high(cha5)->4(cha3)->vhigh(cha1)->low(cha0)"
+	"root->high(cha5)->4(cha3)->vhigh(cha1)" -> "root->high(cha5)->4(cha3)->vhigh(cha1)->low(cha0)" [label="low(cha0)"]
+	"root->high(cha5)->4(cha3)->med(cha1)"
+	"root->high(cha5)->4(cha3)" -> "root->high(cha5)->4(cha3)->med(cha1)" [label="med(cha1)"]
+	"root->high(cha5)->4(cha3)->low(cha1)"
+	"root->high(cha5)->4(cha3)" -> "root->high(cha5)->4(cha3)->low(cha1)" [label="low(cha1)"]
+	"root->high(cha5)->2(cha3)"
+	"root->high(cha5)" -> "root->high(cha5)->2(cha3)" [label="2(cha3)"]
+}

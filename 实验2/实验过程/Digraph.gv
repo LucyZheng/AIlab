@@ -1,0 +1,402 @@
+// The Decision Tree
+digraph {
+	root
+	low
+	root -> low [label=" "]
+	med
+	root -> med [label=" "]
+	4
+	med -> 4 [label=" "]
+	high0
+	4 -> high0 [label=" "]
+	med
+	high0 -> med [label=" "]
+	2
+	med -> 2 [label=" "]
+	4
+	med -> 4 [label=" "]
+	"5more"
+	med -> "5more" [label=" "]
+	med1
+	"5more" -> med1 [label=" "]
+	vhigh1
+	"5more" -> vhigh1 [label=" "]
+	high1
+	"5more" -> high1 [label=" "]
+	3
+	med -> 3 [label=" "]
+	small
+	high0 -> small [label=" "]
+	big
+	high0 -> big [label=" "]
+	high1
+	big -> high1 [label=" "]
+	med1
+	big -> med1 [label=" "]
+	low1
+	big -> low1 [label=" "]
+	vhigh1
+	big -> vhigh1 [label=" "]
+	vhigh0
+	4 -> vhigh0 [label=" "]
+	med1
+	vhigh0 -> med1 [label=" "]
+	small
+	med1 -> small [label=" "]
+	big
+	med1 -> big [label=" "]
+	med
+	med1 -> med [label=" "]
+	"5more"
+	med -> "5more" [label=" "]
+	4
+	med -> 4 [label=" "]
+	3
+	med -> 3 [label=" "]
+	low1
+	vhigh0 -> low1 [label=" "]
+	med
+	low1 -> med [label=" "]
+	"5more"
+	med -> "5more" [label=" "]
+	4
+	med -> 4 [label=" "]
+	3
+	med -> 3 [label=" "]
+	big
+	low1 -> big [label=" "]
+	small
+	low1 -> small [label=" "]
+	high1
+	vhigh0 -> high1 [label=" "]
+	vhigh1
+	vhigh0 -> vhigh1 [label=" "]
+	low0
+	4 -> low0 [label=" "]
+	vhigh1
+	low0 -> vhigh1 [label=" "]
+	small
+	vhigh1 -> small [label=" "]
+	med
+	vhigh1 -> med [label=" "]
+	"5more"
+	med -> "5more" [label=" "]
+	2
+	med -> 2 [label=" "]
+	4
+	med -> 4 [label=" "]
+	3
+	med -> 3 [label=" "]
+	big
+	vhigh1 -> big [label=" "]
+	high1
+	low0 -> high1 [label=" "]
+	low1
+	low0 -> low1 [label=" "]
+	med1
+	low0 -> med1 [label=" "]
+	med0
+	4 -> med0 [label=" "]
+	med1
+	med0 -> med1 [label=" "]
+	high1
+	med0 -> high1 [label=" "]
+	med
+	high1 -> med [label=" "]
+	4
+	med -> 4 [label=" "]
+	2
+	med -> 2 [label=" "]
+	3
+	med -> 3 [label=" "]
+	small
+	high1 -> small [label=" "]
+	big
+	high1 -> big [label=" "]
+	low1
+	med0 -> low1 [label=" "]
+	vhigh1
+	med0 -> vhigh1 [label=" "]
+	small
+	vhigh1 -> small [label=" "]
+	med
+	vhigh1 -> med [label=" "]
+	3
+	med -> 3 [label=" "]
+	"5more"
+	med -> "5more" [label=" "]
+	2
+	med -> 2 [label=" "]
+	big
+	vhigh1 -> big [label=" "]
+	2
+	med -> 2 [label=" "]
+	more
+	med -> more [label=" "]
+	big
+	more -> big [label=" "]
+	high1
+	big -> high1 [label=" "]
+	med1
+	big -> med1 [label=" "]
+	low1
+	big -> low1 [label=" "]
+	vhigh1
+	big -> vhigh1 [label=" "]
+	high0
+	vhigh1 -> high0 [label=" "]
+	vhigh0
+	vhigh1 -> vhigh0 [label=" "]
+	low0
+	vhigh1 -> low0 [label=" "]
+	med0
+	vhigh1 -> med0 [label=" "]
+	med
+	more -> med [label=" "]
+	low0
+	med -> low0 [label=" "]
+	med1
+	low0 -> med1 [label=" "]
+	low1
+	low0 -> low1 [label=" "]
+	high1
+	low0 -> high1 [label=" "]
+	vhigh1
+	low0 -> vhigh1 [label=" "]
+	4
+	vhigh1 -> 4 [label=" "]
+	2
+	vhigh1 -> 2 [label=" "]
+	"5more"
+	vhigh1 -> "5more" [label=" "]
+	med0
+	med -> med0 [label=" "]
+	4
+	med0 -> 4 [label=" "]
+	"5more"
+	med0 -> "5more" [label=" "]
+	2
+	med0 -> 2 [label=" "]
+	low1
+	2 -> low1 [label=" "]
+	vhigh1
+	2 -> vhigh1 [label=" "]
+	3
+	med0 -> 3 [label=" "]
+	high0
+	med -> high0 [label=" "]
+	2
+	high0 -> 2 [label=" "]
+	"5more"
+	high0 -> "5more" [label=" "]
+	med1
+	"5more" -> med1 [label=" "]
+	vhigh1
+	"5more" -> vhigh1 [label=" "]
+	3
+	high0 -> 3 [label=" "]
+	4
+	high0 -> 4 [label=" "]
+	low1
+	4 -> low1 [label=" "]
+	vhigh1
+	4 -> vhigh1 [label=" "]
+	med1
+	4 -> med1 [label=" "]
+	high1
+	4 -> high1 [label=" "]
+	vhigh0
+	med -> vhigh0 [label=" "]
+	vhigh1
+	vhigh0 -> vhigh1 [label=" "]
+	low1
+	vhigh0 -> low1 [label=" "]
+	3
+	low1 -> 3 [label=" "]
+	"5more"
+	low1 -> "5more" [label=" "]
+	2
+	low1 -> 2 [label=" "]
+	med1
+	vhigh0 -> med1 [label=" "]
+	high1
+	vhigh0 -> high1 [label=" "]
+	small
+	more -> small [label=" "]
+	vhigh0
+	small -> vhigh0 [label=" "]
+	low0
+	small -> low0 [label=" "]
+	med1
+	low0 -> med1 [label=" "]
+	high1
+	low0 -> high1 [label=" "]
+	2
+	high1 -> 2 [label=" "]
+	3
+	high1 -> 3 [label=" "]
+	vhigh1
+	low0 -> vhigh1 [label=" "]
+	low1
+	low0 -> low1 [label=" "]
+	med0
+	small -> med0 [label=" "]
+	high1
+	med0 -> high1 [label=" "]
+	vhigh1
+	med0 -> vhigh1 [label=" "]
+	med1
+	med0 -> med1 [label=" "]
+	3
+	med1 -> 3 [label=" "]
+	2
+	med1 -> 2 [label=" "]
+	"5more"
+	med1 -> "5more" [label=" "]
+	low1
+	med0 -> low1 [label=" "]
+	"5more"
+	low1 -> "5more" [label=" "]
+	3
+	low1 -> 3 [label=" "]
+	2
+	low1 -> 2 [label=" "]
+	4
+	low1 -> 4 [label=" "]
+	high0
+	small -> high0 [label=" "]
+	high
+	root -> high [label=" "]
+	more
+	high -> more [label=" "]
+	high1
+	more -> high1 [label=" "]
+	med0
+	high1 -> med0 [label=" "]
+	low0
+	high1 -> low0 [label=" "]
+	4
+	low0 -> 4 [label=" "]
+	3
+	low0 -> 3 [label=" "]
+	"5more"
+	low0 -> "5more" [label=" "]
+	2
+	low0 -> 2 [label=" "]
+	med
+	2 -> med [label=" "]
+	big
+	2 -> big [label=" "]
+	small
+	2 -> small [label=" "]
+	high0
+	high1 -> high0 [label=" "]
+	2
+	high0 -> 2 [label=" "]
+	small
+	2 -> small [label=" "]
+	big
+	2 -> big [label=" "]
+	3
+	high0 -> 3 [label=" "]
+	"5more"
+	high0 -> "5more" [label=" "]
+	4
+	high0 -> 4 [label=" "]
+	vhigh0
+	high1 -> vhigh0 [label=" "]
+	vhigh1
+	more -> vhigh1 [label=" "]
+	low0
+	vhigh1 -> low0 [label=" "]
+	small
+	low0 -> small [label=" "]
+	2
+	small -> 2 [label=" "]
+	3
+	small -> 3 [label=" "]
+	med
+	low0 -> med [label=" "]
+	big
+	low0 -> big [label=" "]
+	med0
+	vhigh1 -> med0 [label=" "]
+	3
+	med0 -> 3 [label=" "]
+	4
+	med0 -> 4 [label=" "]
+	2
+	med0 -> 2 [label=" "]
+	big
+	2 -> big [label=" "]
+	small
+	2 -> small [label=" "]
+	med
+	2 -> med [label=" "]
+	"5more"
+	med0 -> "5more" [label=" "]
+	high0
+	vhigh1 -> high0 [label=" "]
+	vhigh0
+	vhigh1 -> vhigh0 [label=" "]
+	med1
+	more -> med1 [label=" "]
+	4
+	med1 -> 4 [label=" "]
+	"5more"
+	med1 -> "5more" [label=" "]
+	3
+	med1 -> 3 [label=" "]
+	2
+	med1 -> 2 [label=" "]
+	big
+	2 -> big [label=" "]
+	med
+	2 -> med [label=" "]
+	small
+	2 -> small [label=" "]
+	low1
+	more -> low1 [label=" "]
+	2
+	low1 -> 2 [label=" "]
+	big
+	2 -> big [label=" "]
+	med
+	2 -> med [label=" "]
+	small
+	2 -> small [label=" "]
+	4
+	low1 -> 4 [label=" "]
+	3
+	low1 -> 3 [label=" "]
+	"5more"
+	low1 -> "5more" [label=" "]
+	4
+	high -> 4 [label=" "]
+	vhigh0
+	4 -> vhigh0 [label=" "]
+	high1
+	vhigh0 -> high1 [label=" "]
+	vhigh1
+	vhigh0 -> vhigh1 [label=" "]
+	med1
+	vhigh0 -> med1 [label=" "]
+	low1
+	vhigh0 -> low1 [label=" "]
+	high0
+	4 -> high0 [label=" "]
+	vhigh1
+	high0 -> vhigh1 [label=" "]
+	med1
+	high0 -> med1 [label=" "]
+	low1
+	high0 -> low1 [label=" "]
+	high1
+	high0 -> high1 [label=" "]
+	med0
+	4 -> med0 [label=" "]
+	low0
+	4 -> low0 [label=" "]
+	2
+	high -> 2 [label=" "]
+}

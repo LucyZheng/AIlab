@@ -1,0 +1,402 @@
+// The Decision Tree
+digraph {
+	A
+	low
+	A -> low [label=low]
+	med
+	A -> med [label=med]
+	4
+	med -> 4 [label=4]
+	high
+	4 -> high [label=high]
+	med
+	high -> med [label=med]
+	2
+	med -> 2 [label=2]
+	4
+	med -> 4 [label=4]
+	"5more"
+	med -> "5more" [label="5more"]
+	med
+	"5more" -> med [label=med]
+	vhigh
+	"5more" -> vhigh [label=vhigh]
+	high
+	"5more" -> high [label=high]
+	3
+	med -> 3 [label=3]
+	small
+	high -> small [label=small]
+	big
+	high -> big [label=big]
+	high
+	big -> high [label=high]
+	med
+	big -> med [label=med]
+	low
+	big -> low [label=low]
+	vhigh
+	big -> vhigh [label=vhigh]
+	vhigh
+	4 -> vhigh [label=vhigh]
+	med
+	vhigh -> med [label=med]
+	small
+	med -> small [label=small]
+	big
+	med -> big [label=big]
+	med
+	med -> med [label=med]
+	"5more"
+	med -> "5more" [label="5more"]
+	4
+	med -> 4 [label=4]
+	3
+	med -> 3 [label=3]
+	low
+	vhigh -> low [label=low]
+	med
+	low -> med [label=med]
+	"5more"
+	med -> "5more" [label="5more"]
+	4
+	med -> 4 [label=4]
+	3
+	med -> 3 [label=3]
+	big
+	low -> big [label=big]
+	small
+	low -> small [label=small]
+	high
+	vhigh -> high [label=high]
+	vhigh
+	vhigh -> vhigh [label=vhigh]
+	low
+	4 -> low [label=low]
+	vhigh
+	low -> vhigh [label=vhigh]
+	small
+	vhigh -> small [label=small]
+	med
+	vhigh -> med [label=med]
+	"5more"
+	med -> "5more" [label="5more"]
+	2
+	med -> 2 [label=2]
+	4
+	med -> 4 [label=4]
+	3
+	med -> 3 [label=3]
+	big
+	vhigh -> big [label=big]
+	high
+	low -> high [label=high]
+	low
+	low -> low [label=low]
+	med
+	low -> med [label=med]
+	med
+	4 -> med [label=med]
+	med
+	med -> med [label=med]
+	high
+	med -> high [label=high]
+	med
+	high -> med [label=med]
+	4
+	med -> 4 [label=4]
+	2
+	med -> 2 [label=2]
+	3
+	med -> 3 [label=3]
+	small
+	high -> small [label=small]
+	big
+	high -> big [label=big]
+	low
+	med -> low [label=low]
+	vhigh
+	med -> vhigh [label=vhigh]
+	small
+	vhigh -> small [label=small]
+	med
+	vhigh -> med [label=med]
+	3
+	med -> 3 [label=3]
+	"5more"
+	med -> "5more" [label="5more"]
+	2
+	med -> 2 [label=2]
+	big
+	vhigh -> big [label=big]
+	2
+	med -> 2 [label=2]
+	more
+	med -> more [label=more]
+	big
+	more -> big [label=big]
+	high
+	big -> high [label=high]
+	med
+	big -> med [label=med]
+	low
+	big -> low [label=low]
+	vhigh
+	big -> vhigh [label=vhigh]
+	high
+	vhigh -> high [label=high]
+	vhigh
+	vhigh -> vhigh [label=vhigh]
+	low
+	vhigh -> low [label=low]
+	med
+	vhigh -> med [label=med]
+	med
+	more -> med [label=med]
+	low
+	med -> low [label=low]
+	med
+	low -> med [label=med]
+	low
+	low -> low [label=low]
+	high
+	low -> high [label=high]
+	vhigh
+	low -> vhigh [label=vhigh]
+	4
+	vhigh -> 4 [label=4]
+	2
+	vhigh -> 2 [label=2]
+	"5more"
+	vhigh -> "5more" [label="5more"]
+	med
+	med -> med [label=med]
+	4
+	med -> 4 [label=4]
+	"5more"
+	med -> "5more" [label="5more"]
+	2
+	med -> 2 [label=2]
+	low
+	2 -> low [label=low]
+	vhigh
+	2 -> vhigh [label=vhigh]
+	3
+	med -> 3 [label=3]
+	high
+	med -> high [label=high]
+	2
+	high -> 2 [label=2]
+	"5more"
+	high -> "5more" [label="5more"]
+	med
+	"5more" -> med [label=med]
+	vhigh
+	"5more" -> vhigh [label=vhigh]
+	3
+	high -> 3 [label=3]
+	4
+	high -> 4 [label=4]
+	low
+	4 -> low [label=low]
+	vhigh
+	4 -> vhigh [label=vhigh]
+	med
+	4 -> med [label=med]
+	high
+	4 -> high [label=high]
+	vhigh
+	med -> vhigh [label=vhigh]
+	vhigh
+	vhigh -> vhigh [label=vhigh]
+	low
+	vhigh -> low [label=low]
+	3
+	low -> 3 [label=3]
+	"5more"
+	low -> "5more" [label="5more"]
+	2
+	low -> 2 [label=2]
+	med
+	vhigh -> med [label=med]
+	high
+	vhigh -> high [label=high]
+	small
+	more -> small [label=small]
+	vhigh
+	small -> vhigh [label=vhigh]
+	low
+	small -> low [label=low]
+	med
+	low -> med [label=med]
+	high
+	low -> high [label=high]
+	2
+	high -> 2 [label=2]
+	3
+	high -> 3 [label=3]
+	vhigh
+	low -> vhigh [label=vhigh]
+	low
+	low -> low [label=low]
+	med
+	small -> med [label=med]
+	high
+	med -> high [label=high]
+	vhigh
+	med -> vhigh [label=vhigh]
+	med
+	med -> med [label=med]
+	3
+	med -> 3 [label=3]
+	2
+	med -> 2 [label=2]
+	"5more"
+	med -> "5more" [label="5more"]
+	low
+	med -> low [label=low]
+	"5more"
+	low -> "5more" [label="5more"]
+	3
+	low -> 3 [label=3]
+	2
+	low -> 2 [label=2]
+	4
+	low -> 4 [label=4]
+	high
+	small -> high [label=high]
+	high
+	A -> high [label=high]
+	more
+	high -> more [label=more]
+	high
+	more -> high [label=high]
+	med
+	high -> med [label=med]
+	low
+	high -> low [label=low]
+	4
+	low -> 4 [label=4]
+	3
+	low -> 3 [label=3]
+	"5more"
+	low -> "5more" [label="5more"]
+	2
+	low -> 2 [label=2]
+	med
+	2 -> med [label=med]
+	big
+	2 -> big [label=big]
+	small
+	2 -> small [label=small]
+	high
+	high -> high [label=high]
+	2
+	high -> 2 [label=2]
+	small
+	2 -> small [label=small]
+	big
+	2 -> big [label=big]
+	3
+	high -> 3 [label=3]
+	"5more"
+	high -> "5more" [label="5more"]
+	4
+	high -> 4 [label=4]
+	vhigh
+	high -> vhigh [label=vhigh]
+	vhigh
+	more -> vhigh [label=vhigh]
+	low
+	vhigh -> low [label=low]
+	small
+	low -> small [label=small]
+	2
+	small -> 2 [label=2]
+	3
+	small -> 3 [label=3]
+	med
+	low -> med [label=med]
+	big
+	low -> big [label=big]
+	med
+	vhigh -> med [label=med]
+	3
+	med -> 3 [label=3]
+	4
+	med -> 4 [label=4]
+	2
+	med -> 2 [label=2]
+	big
+	2 -> big [label=big]
+	small
+	2 -> small [label=small]
+	med
+	2 -> med [label=med]
+	"5more"
+	med -> "5more" [label="5more"]
+	high
+	vhigh -> high [label=high]
+	vhigh
+	vhigh -> vhigh [label=vhigh]
+	med
+	more -> med [label=med]
+	4
+	med -> 4 [label=4]
+	"5more"
+	med -> "5more" [label="5more"]
+	3
+	med -> 3 [label=3]
+	2
+	med -> 2 [label=2]
+	big
+	2 -> big [label=big]
+	med
+	2 -> med [label=med]
+	small
+	2 -> small [label=small]
+	low
+	more -> low [label=low]
+	2
+	low -> 2 [label=2]
+	big
+	2 -> big [label=big]
+	med
+	2 -> med [label=med]
+	small
+	2 -> small [label=small]
+	4
+	low -> 4 [label=4]
+	3
+	low -> 3 [label=3]
+	"5more"
+	low -> "5more" [label="5more"]
+	4
+	high -> 4 [label=4]
+	vhigh
+	4 -> vhigh [label=vhigh]
+	high
+	vhigh -> high [label=high]
+	vhigh
+	vhigh -> vhigh [label=vhigh]
+	med
+	vhigh -> med [label=med]
+	low
+	vhigh -> low [label=low]
+	high
+	4 -> high [label=high]
+	vhigh
+	high -> vhigh [label=vhigh]
+	med
+	high -> med [label=med]
+	low
+	high -> low [label=low]
+	high
+	high -> high [label=high]
+	med
+	4 -> med [label=med]
+	low
+	4 -> low [label=low]
+	2
+	high -> 2 [label=2]
+}
